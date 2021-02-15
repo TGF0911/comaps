@@ -7,5 +7,6 @@ const upload = multer(uploadConfig);
 const routes = Router();
 
 routes.post('/company', upload.array('images') ,CompanyController.create);
+routes.get('/company', CompanyController.index);
 
 export default routes;

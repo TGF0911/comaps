@@ -22,7 +22,6 @@ export default class Company {
   @Column()
   cnpj!: string;
 
-
   @Column()
   description!: string;
 
