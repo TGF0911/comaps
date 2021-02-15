@@ -1,5 +1,7 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import Category from './Category';
 import Favorites from './Favorites';
+import Images from './Images';
 import Product from './Product';
 import Rating from './Rating';
 
@@ -42,4 +44,10 @@ export default class Company {
 
   @OneToMany(type => Product, company => Company)
   products!: Product[];
+
+  @OneToMany(type => Category, company => Company)
+  categories!: Category[];
+
+  @OneToMany(type => Images, company => Company)
+  images!: Images[];
 }
